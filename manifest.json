@@ -1,0 +1,25 @@
+{
+    "name" :"Article Summarizer",
+    "version":"0.0.1",
+    "manifest_version":2,
+    "browser_action":{
+        "default_popup" :"popup.html",
+        "default_icon": "logo.png"
+    },
+    "content_scripts": 
+  [
+    {
+      "matches": ["<all_urls>"],
+      "js" : ["content.js"]
+    }
+  ],
+  "background":
+  {
+    "scripts":["background.js"]
+  },
+    "icons":{
+        "128":"logo.png"
+    },
+   
+    "permissions":["tabs","activeTab"]
+}
